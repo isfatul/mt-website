@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+ul > li:hover {
+  text-decoration: underline white 2px;
+  text-underline-offset: 10px;
+  cursor: pointer;
+}
