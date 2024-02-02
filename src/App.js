@@ -368,7 +368,7 @@ function App() {
           {drawerOpen ? (
             <svg
               className="sm:hidden w-full ml-[65%] cursor-pointer"
-              ref={wrapperRef}
+              // ref={wrapperRef}
               onClick={() => setDrawerOpen(!drawerOpen)}
               xmlns="http://www.w3.org/2000/svg"
               width="51"
@@ -387,7 +387,7 @@ function App() {
           ) : (
             <svg
               className="sm:hidden w-full ml-[65%] cursor-pointer"
-              // ref={wrapperRef}
+              ref={wrapperRef}
               onClick={() => setDrawerOpen(!drawerOpen)}
               xmlns="http://www.w3.org/2000/svg"
               width="51"
