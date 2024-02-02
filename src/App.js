@@ -8,9 +8,11 @@ import ICTD from "./assets/logo/ictd.png";
 import Aqualink from "./assets/logo/aqualink.png";
 import Protocase from "./assets/logo/protocase.webp";
 import BracuE from "./assets/logo/be.png";
+import Modal from "./Modal";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
   function useOutsideAlerter(ref) {
     useEffect(() => {
       /**
@@ -53,39 +55,114 @@ function App() {
       title: "URC 2017",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      teamImage: "https://via.placeholder.com/500",
+      SAR: "",
       id: 2017,
     },
     {
       title: "URC 2018",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      teamImage: "https://via.placeholder.com/500",
+      SAR: "",
       id: 2018,
     },
     {
       title: "URC 2019",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      teamImage: "https://via.placeholder.com/500",
+      SAR: (
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/nrYdRLCD1c0?si=LxRConfAm-gHRnVX"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       id: 2019,
     },
     {
       title: "URC 2020",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      teamImage: "https://via.placeholder.com/500",
+      SAR: (
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/y5UN2gw1dQ4?si=jM2rcp84NUBIaGHe"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       id: 2020,
     },
     {
       title: "URC 2021",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      teamImage: "https://via.placeholder.com/500",
+      SAR: (
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/2oXj6f-N9iI?si=yv0IPjj-l5qaamak"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       id: 2021,
     },
     {
       title: "URC 2022",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      teamImage: "https://via.placeholder.com/500",
+      SAR: (
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/Yno4DN9ENTA?si=h6ZdzVWLlcFYpUJJ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       id: 2022,
     },
     {
       title: "URC 2023",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+      shortDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      teamImage: "https://via.placeholder.com/500",
+      SAR: (
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/LcXDMddb31I?si=prA1D5GQ66_m5nKk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      ),
       id: 2023,
     },
   ];
+
+  const [activeInfo, setActiveInfo] = useState(null);
 
   return (
     <div className="overflow-hidden" id="home">
@@ -443,7 +520,31 @@ function App() {
         <div className="absolute md:left-[50%] left-[60%] translate-x-[-50%] top-[230px] md:h-[500px] md:w-[500px] h-[400px] w-[400px]">
           <img src={Rover} alt="rover" />
         </div>
-        <div className="krub-bold tracking-[0.3em] text-2xl text-white bg-[#FC9C2D] absolute right-[-10px] top-[70px] py-3 pl-7 pr-[60px] border-2 cursor-pointer hover:pr-[100px] transition-all">
+        <div
+          onClick={() => {
+            setActiveInfo({
+              title: "URC 2024",
+              description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+              shortDescription:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              teamImage: "https://via.placeholder.com/500",
+              SAR: (
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/LcXDMddb31I?si=prA1D5GQ66_m5nKk"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              ),
+              id: 2024,
+            });
+            setModalVisible(true);
+          }}
+          className="krub-bold tracking-[0.3em] text-2xl text-white bg-[#FC9C2D] absolute right-[-10px] top-[70px] py-3 pl-7 pr-[60px] border-2 cursor-pointer hover:pr-[100px] transition-all"
+        >
           <div>URC</div>
           <div>2024</div>
         </div>
@@ -627,7 +728,13 @@ function App() {
                   <div className="text-white krub-semibold text-sm">
                     {i.description}
                   </div>
-                  <div className="p-3 text-white oswald-bold bg-[#FC9C2D] mt-5 hover:bg-transparent hover:border-2 hover:border-[#FC9C2D] cursor-pointer border-2 border-transparent">
+                  <div
+                    onClick={() => {
+                      setActiveInfo(i);
+                      setModalVisible(true);
+                    }}
+                    className="p-3 text-white oswald-bold bg-[#FC9C2D] mt-5 hover:bg-transparent hover:border-2 hover:border-[#FC9C2D] cursor-pointer border-2 border-transparent"
+                  >
                     READ MORE
                   </div>
                 </div>
@@ -1182,6 +1289,13 @@ function App() {
           </div>
         </div>
       </div>
+      <Modal
+        data={activeInfo}
+        isVisible={modalVisible}
+        onClose={() => {
+          setModalVisible(false);
+        }}
+      />
     </div>
   );
 }
