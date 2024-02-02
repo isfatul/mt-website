@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./App.css";
 import Rover from "./assets/img/rover.png";
-import MTlogo from "./assets/logo/Mtlogo.svg";
+// import MTlogo from "./assets/logo/Mtlogo.svg";
 import AdvisorImage from "./assets/img/Dr. Md. Khalilur Rhaman.jpg";
 import ICTD from "./assets/logo/ictd.png";
 import Aqualink from "./assets/logo/aqualink.png";
